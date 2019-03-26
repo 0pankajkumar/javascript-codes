@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	<div id="demo"></div>
+	<button onclick="myFunction()">Try it</button>
+
+	<script type="text/javascript">
+		
+		function myFunction() {
+			var str = "aabbcccdD"
+			var count = 0
+			var j = 0, i = 0
+
+			var mySet = new Set()
+			var strSplit = str.split("")
+			for (let item of strSplit) mySet.add(item);
+
+
+			
+
+			document.getElementById('demo').innerText = mySet.size
+
+
+
+
+
+
+			/*
+			for(j = 0; j < str.length; j++) {
+				for(i = 97; i <= 122; i++) {
+					console.log(String.fromCharCode(i))
+					let pattern = new RegExp((String.fromCharCode(i)), "gi")
+					if(str.match(pattern)) {
+						count++;
+						j = str.length + 1;
+					}
+			
+				}
+			}
+			document.getElementById('demo').innerText = count
+			*/
+			
+
+		}
+		
+
+
+	</script>
+</body>
+</html>

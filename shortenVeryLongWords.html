@@ -1,0 +1,66 @@
+<!-- 
+Program to abbrevate very long words ( > 10 alphabets)using a notation
+eg: "localization" will be spelt as "l10n", and "internationalization» will be spelt as "i18n"
+
+//Made for submission at codeforces
+//by Pankaj Kumar
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	<div id="demo"></div>
+	<button onclick="myFunction()">Try it</button>
+
+	<script type="text/javascript">
+		
+		function myFunction() {
+			var str = ["Hello", "Schizopherniaisbadforhealth", "Octoporosisphia"]
+			var strOut = []
+
+			for (let st of str)
+			{
+				if(st.length > 10)
+				{
+					st = st[0] + (st.length-2) + st[st.length-1]
+					console.log(st)
+					strOut.push(st)
+				}
+				else
+				{
+					strOut.push(st)
+				}
+			}
+			
+
+			document.getElementById('demo').innerText = strOut
+
+
+
+
+
+
+			/*
+			for(j = 0; j < str.length; j++) {
+				for(i = 97; i <= 122; i++) {
+					console.log(String.fromCharCode(i))
+					let pattern = new RegExp((String.fromCharCode(i)), "gi")
+					if(str.match(pattern)) {
+						count++;
+						j = str.length + 1;
+					}
+			
+				}
+			}
+			document.getElementById('demo').innerText = count
+			*/
+			
+
+		}
+		
+
+
+	</script>
+</body>
+</html>
